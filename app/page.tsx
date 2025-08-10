@@ -537,7 +537,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-6 bg-slate-900 dark:bg-slate-950 text-slate-400 text-center">
         <div className="container mx-auto">
-          <p>&copy; 2025 Joy Pedze. Built with passion for data engineering.</p>
+          <p>&copy; 2025 Joy Pedze. Built with passsion for data engineering.</p>
         </div>
       </footer>
 
