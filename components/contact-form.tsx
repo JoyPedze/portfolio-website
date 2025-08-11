@@ -52,7 +52,7 @@ export function ContactForm() {
           <Mail className="w-5 h-5 text-blue-600" />
           Send me a message
         </CardTitle>
-        <CardDescription>I'll respond to your message at joypedped@gmail.com</CardDescription>
+        <CardDescription>I'll get back to you within 24-48 hours.</CardDescription>
       </CardHeader>
       <CardContent>
         <form action={handleSubmit} className="space-y-4">
