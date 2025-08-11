@@ -8,7 +8,6 @@ import {
   Database,
   Cloud,
   Code,
-  Mail,
   Linkedin,
   Github,
   Server,
@@ -52,7 +51,7 @@ export default function Portfolio() {
     {
       title: "AWS Certified Cloud Practitioner",
       url: "https://www.credly.com/badges/14cfb5a0-fd39-45ac-852f-831abefd9f95/linked_in_profile",
-      logo: "/images/aws-logo.png",
+      logo: "/images/aws-logo.webp",
       color: "bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700",
     },
     {
@@ -113,10 +112,10 @@ export default function Portfolio() {
         "Hive/Glue Catalog",
       ],
       description: "Cloud infrastructure and data storage solutions",
-      color: "from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30",
-      borderColor: "border-blue-200 dark:border-blue-700",
-      iconColor: "text-blue-600 dark:text-blue-400",
-      badgeColor: "bg-blue-100 dark:bg-blue-800/50 text-blue-800 dark:text-blue-200 border-blue-200 dark:border-blue-700",
+      color: "from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700",
+      borderColor: "border-slate-200 dark:border-slate-600",
+      iconColor: "text-slate-600 dark:text-slate-300",
+      badgeColor: "bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-600",
     },
     {
       title: "Modeling & Architectures",
@@ -180,43 +179,39 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
       {/* Header */}
-      <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50 transition-colors duration-300">
-        <div className="container mx-auto px-6 py-4">
+      <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50 transition-colors duration-200 ease-out">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <nav className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Joy Pedze</h1>
-            <div className="flex gap-3 items-center">
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-200">Joy Pedze</h1>
+            <div className="flex gap-2 sm:gap-3 items-center">
               <ThemeToggle />
-              <Button variant="ghost" size="sm" asChild>
+              <Button variant="ghost" size="sm" asChild className="px-2 sm:px-3">
                 <a href="#resume" className="flex items-center">
-                  <FileText className="w-4 h-4 mr-2" />
-                  Resume
+                  <FileText className="w-4 h-4 sm:mr-2" />
+                  <span className="hidden sm:inline">Resume</span>
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" asChild>
+              <Button variant="ghost" size="sm" asChild className="px-2 sm:px-3">
                 <a
                   href="https://github.com/JoyPedze"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <Github className="w-4 h-4 mr-2" />
-                  GitHub
+                  <Github className="w-4 h-4 sm:mr-2" />
+                  <span className="hidden sm:inline">GitHub</span>
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" asChild>
+              <Button variant="ghost" size="sm" asChild className="px-2 sm:px-3">
                 <a
                   href="https://www.linkedin.com/in/joy-pedze/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  LinkedIn
+                  <Linkedin className="w-4 h-4 sm:mr-2" />
+                  <span className="hidden sm:inline">LinkedIn</span>
                 </a>
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Mail className="w-4 h-4 mr-2" />
-                Email
               </Button>
             </div>
           </nav>
@@ -224,50 +219,50 @@ export default function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section ref={heroRef} className="py-20 px-6 opacity-0 translate-y-8 transition-all duration-1000">
+      <section ref={heroRef} className="py-12 sm:py-20 px-4 sm:px-6 opacity-0 translate-y-8 transition-all duration-1000">
         <div className="container mx-auto text-center">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6 animate-pulse-slow">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-4 sm:mb-6 animate-pulse-slow">
               Joy Pedze
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-6 sm:mb-8 leading-relaxed max-w-4xl mx-auto px-2">
               Data Engineer & Platform Architect — I design reliable, scalable data systems (Lakehouse, Streaming,
               CI/CD) so teams can trust their data.
             </p>
 
             {/* Fast Proof Chips */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-slate-300 dark:border-slate-600">
+            <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12 px-2">
+              <Badge variant="outline" className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-slate-300 dark:border-slate-600">
                 Lakehouse (Delta)
               </Badge>
-              <span className="text-slate-400 self-center">·</span>
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-slate-300 dark:border-slate-600">
+              <span className="text-slate-400 self-center hidden sm:inline">·</span>
+              <Badge variant="outline" className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-slate-300 dark:border-slate-600">
                 Kafka Streaming
               </Badge>
-              <span className="text-slate-400 self-center">·</span>
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-slate-300 dark:border-slate-600">
+              <span className="text-slate-400 self-center hidden sm:inline">·</span>
+              <Badge variant="outline" className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-slate-300 dark:border-slate-600">
                 Airflow & dbt
               </Badge>
-              <span className="text-slate-400 self-center">·</span>
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-slate-300 dark:border-slate-600">
+              <span className="text-slate-400 self-center hidden sm:inline">·</span>
+              <Badge variant="outline" className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-slate-300 dark:border-slate-600">
                 AWS (S3/Glue/EMR/Redshift)
               </Badge>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="hover:scale-105 transition-transform">
-                <FileText className="w-5 h-5 mr-2" />
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-2">
+              <Button size="lg" className="hover:scale-105 transition-transform text-sm sm:text-base">
+                <FileText className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 View Resume
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 asChild
-                className="hover:scale-105 transition-transform bg-transparent"
+                className="hover:scale-105 transition-transform bg-transparent text-sm sm:text-base"
               >
                 <a href="https://github.com/JoyPedze" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-5 h-5 mr-2" />
+                  <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   GitHub
                 </a>
               </Button>
@@ -275,16 +270,12 @@ export default function Portfolio() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="hover:scale-105 transition-transform bg-transparent"
+                className="hover:scale-105 transition-transform bg-transparent text-sm sm:text-base"
               >
                 <a href="https://www.linkedin.com/in/joy-pedze/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-5 h-5 mr-2" />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   LinkedIn
                 </a>
-              </Button>
-              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform bg-transparent">
-                <Mail className="w-5 h-5 mr-2" />
-                Email
               </Button>
             </div>
           </div>
@@ -345,33 +336,41 @@ export default function Portfolio() {
               {certifications.map((cert, index) => (
                 <Card
                   key={index}
-                  className={`${cert.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                  className={`${cert.color} hover:shadow-xl hover:scale-[1.02] transition-all duration-200 ease-out hover:-translate-y-1 cursor-pointer group will-change-transform`}
+                  style={{ transform: 'translateZ(0)' }}
                 >
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-white dark:bg-slate-700 rounded-lg p-2 flex items-center justify-center">
-                          <Image
-                            src={cert.logo}
-                            alt={`${cert.title} logo`}
-                            width={32}
-                            height={32}
-                            className="object-contain"
-                            onError={(e) => {
-                              console.error(`Failed to load image: ${cert.logo}`);
-                              e.currentTarget.src = "/placeholder.svg";
-                            }}
-                          />
+                  <a 
+                    href={cert.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full h-full"
+                  >
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className="w-16 h-16 bg-white dark:bg-slate-700 rounded-xl p-3 flex items-center justify-center shadow-sm">
+                            <Image
+                              src={cert.logo}
+                              alt={`${cert.title} logo`}
+                              width={48}
+                              height={48}
+                              className="object-contain"
+                              onError={(e) => {
+                                console.error(`Failed to load image: ${cert.logo}`);
+                                e.currentTarget.src = "/placeholder.svg";
+                              }}
+                            />
+                          </div>
+                          <span className="text-lg font-semibold text-slate-800 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors duration-200">
+                            {cert.title}
+                          </span>
                         </div>
-                        <span className="text-lg">{cert.title}</span>
-                      </div>
-                      <Button variant="ghost" size="sm" asChild className="hover:scale-110 transition-transform">
-                        <a href={cert.url} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    </CardTitle>
-                  </CardHeader>
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                          <ExternalLink className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+                        </div>
+                      </CardTitle>
+                    </CardHeader>
+                  </a>
                 </Card>
               ))}
             </div>
@@ -509,11 +508,10 @@ export default function Portfolio() {
               <div className="space-y-6">
                 <div className="text-center md:text-left">
                   <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
-                  <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3">
-                    <Button variant="secondary" size="lg" className="hover:scale-105 transition-transform">
-                      <Mail className="w-5 h-5 mr-2" />
-                      joypedped@gmail.com
-                    </Button>
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    Connect with me on LinkedIn or use the contact form to get in touch about opportunities, collaborations, or just to say hello!
+                  </p>
+                  <div className="flex justify-center md:justify-start">
                     <Button
                       variant="outline"
                       size="lg"
